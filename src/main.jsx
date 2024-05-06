@@ -1,11 +1,13 @@
 import ReactDom from 'react-dom/client'
 import App from './App'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './main.css'
 import Article from './composants/Article'
 import PageError from './composants/PageError'
+import Contact from './composants/Contact'
+import Emploi from './composants/Emploi'
 
 const route = createBrowserRouter([
     {
@@ -18,8 +20,29 @@ const route = createBrowserRouter([
         element: (
         <>
        <h1>ok ouiiiiii</h1>
-    <Link to="/">retour au</Link>
+    <Link to="/">retour a acceuil</Link>
+    <div style={{
+        display: "flex",
+        gap: '1rem',
+    }}>
+        <Link to='/propos/contact'>Contact</Link>
+        <Link to='/propos/emploi'>Emploi</Link>
+    </div>
+    <div>
+        <Outlet/>
+    </div>
     </>),
+    children:[
+        {
+            path: "/propos/contact",
+            element: <Contact/>
+        },
+
+        {
+            path: "/propos/emploi",
+            element: <Emploi/>
+        }
+    ]
     },
     {
         path: "blog",
