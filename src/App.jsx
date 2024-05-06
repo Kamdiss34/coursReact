@@ -60,6 +60,7 @@ const nombreLiker = posts.filter(p=>p.liker)
     <div className='App'>
        <Link to="propos">visiter</Link>
        <Link to="blog">Visitez le blog</Link>
+    
        <Navbar nombreLike={nombreLiker.length}/>
        {
         posts.map((p)=>(

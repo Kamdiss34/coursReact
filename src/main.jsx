@@ -5,11 +5,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './main.css'
 import Article from './composants/Article'
+import PageError from './composants/PageError'
 
 const route = createBrowserRouter([
     {
         path: "/",
         element: <App/>,
+        errorElement: <PageError/>
     },
     {
         path: "propos",
