@@ -17,7 +17,7 @@ const route = createBrowserRouter([
         path: "propos",
         element: (
         <>
-       <h1>ok oui</h1>
+       <h1>ok ouiiiiii</h1>
     <Link to="/">retour au</Link>
     </>),
     },
