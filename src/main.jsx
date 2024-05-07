@@ -8,7 +8,8 @@ import Article from './composants/Article'
 import PageError from './composants/PageError'
 import Contact from './composants/Contact'
 import Emploi from './composants/Emploi'
-
+import Error404 from './composants/Error404'
+import Protege from './composants/Protege'
 const route = createBrowserRouter([
     {
         path: "/",
@@ -40,7 +41,14 @@ const route = createBrowserRouter([
 
         {
             path: "/propos/emploi",
-            element: <Emploi/>
+            element: 
+                <div>
+                <Protege estConnect={true}>
+                <Emploi />
+                
+                </Protege>
+           
+            </div>
         }
     ]
     },
@@ -56,6 +64,10 @@ const route = createBrowserRouter([
         element:<>
             <Article/>
         </>
+    },
+    {
+        path: "*",
+        element: <Error404/>
     }
 ]);
 

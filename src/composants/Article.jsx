@@ -1,7 +1,8 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
 
-export default function Article() {
+import { useParams } from 'react-router-dom'
+export default function Article({estConnect}) {
+
+
     const {id} = useParams();
 
     return (

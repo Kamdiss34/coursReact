@@ -1,4 +1,4 @@
-import React from 'react'
+
 export default function Post({data,liker,suppression}) {
   return (
     <div className='post'>
