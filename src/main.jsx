@@ -71,8 +71,7 @@ const route = createBrowserRouter([
     }
 ]);
 
-ReactDom.createRoot(document.getElementById
-    ("roots")).render(
+ReactDom.createRoot(document.getElementById("roots")).render(
 
 <React.StrictMode>
 
